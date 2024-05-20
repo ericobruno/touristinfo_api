@@ -5,7 +5,7 @@ class TranslateService
   base_uri 'https://api-free.deepl.com/v2'
 
   def initialize(api_key)
-    @api_key = 'a7b8d508-bfae-4bb2-a4ef-bafe1916059d:fx'
+    @api_key = api_key
   end
 
   def translate(texts, target_language)

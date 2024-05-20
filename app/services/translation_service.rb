@@ -22,13 +22,11 @@ class TranslationService
         current_weather: place.current_weather
       }
   
-      # Faz uma única chamada para a API de tradução
+     
       translations_response = deepl_translate_service.translate(fields_to_translate.values, language)
   
-      # Verifica se a resposta contém traduções
       raise StandardError, "Translation response is nil" if translations_response['translations'].nil?
   
-      # Mapeia as traduções para os campos correspondentes
       translated_fields = fields_to_translate.keys.zip(translations_response['translations'].map { |t| t['text'] }).to_h
   
       translated_fields

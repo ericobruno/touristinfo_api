@@ -5,7 +5,7 @@ class GooglePlacesService
   base_uri 'https://places.googleapis.com/v1'
 
   def initialize(api_key)
-    @api_key = 'AIzaSyCwLLAiQxVS87MYvLyBqRcj3_P7rFUI_Ig'
+    @api_key = api_key
   end
 
   def search_places(query)
